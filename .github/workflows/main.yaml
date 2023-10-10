@@ -1,0 +1,64 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          path: leetcode-notes
+
+      - name: Checkout private tools
+        uses: actions/checkout@v4
+        with:
+          repository: GaryHo34/leetcode-site
+          token: ${{ secrets.ACCESS_TOKEN }} 
+          path: leetcode-sites
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+          cache: "pip"
+
+      - name: Install dependencies
+        working-directory: ./leetcode-sites/script
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+          python3 build_markdown.py
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: ./leetcode-sites/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./leetcode-sites
+        run: npm install
+
+      - name: Build website
+        working-directory: ./leetcode-sites
+        run: npm run build
+
+      - uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Deploy to GitHub Pages
+        working-directory: ./leetcode-sites
+        env:
+          USE_SSH: true
+          CUSTOM_COMMIT_MESSAGE: Deploy static site
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          yarn deploy
