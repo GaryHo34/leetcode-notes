@@ -1,8 +1,3 @@
-## 1. Two Sum
-
-### Notes
-
-### Bruteforce 
 
 we can bruteforcing all the possible pairs of numbers and check if the sum is equal to the target.
 

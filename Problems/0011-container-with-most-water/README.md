@@ -1,5 +1,3 @@
-## 11. Container With Most Water
-
 ### Note
 
 In the first glance of this problem, we may think that we can bruteforce all the possible pairs of lines and find the maximum area. However, this will lead to $O(n^2)$ time complexity.
