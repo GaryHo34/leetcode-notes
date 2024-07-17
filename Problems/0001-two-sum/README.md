@@ -1,10 +1,10 @@
----
-tags: [all my god]
-last_update: {'date': '2024-07-16', 'author': 'GaryHo34'}
+<!--
+tags: [array]
+last_update: {'date': '2024-07-17', 'author': 'GaryHo34'}
 sidebar_label: 1. Two Sum
 title: 1. Two Sum
 hide_title: true
----
+-->
 
 ## [1. Two Sum](https://leetcode.com/problems/two-sum)
 

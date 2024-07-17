@@ -1,10 +1,10 @@
----
+<!--
 tags: []
-last_update: {'date': '2024-07-16', 'author': 'GaryHo34'}
+last_update: {'date': '2024-07-17', 'author': 'GaryHo34'}
 sidebar_label: 11. Container With Most Water
 title: 11. Container With Most Water
 hide_title: true
----
+-->
 
 ## [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water)
 
