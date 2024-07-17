@@ -1,3 +1,14 @@
+---
+tags: [all my god]
+last_update: {'date': '2024-07-16', 'author': 'GaryHo34'}
+sidebar_label: 1. Two Sum
+title: 1. Two Sum
+hide_title: true
+---
+
+## [1. Two Sum](https://leetcode.com/problems/two-sum)
+
+![Static Badge](https://img.shields.io/badge/Medium-No_rating-yellow?style=flat-square)
 
 we can bruteforcing all the possible pairs of numbers and check if the sum is equal to the target.
 

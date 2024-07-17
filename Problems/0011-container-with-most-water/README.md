@@ -1,4 +1,14 @@
-### Note
+---
+tags: []
+last_update: {'date': '2024-07-16', 'author': 'GaryHo34'}
+sidebar_label: 11. Container With Most Water
+title: 11. Container With Most Water
+hide_title: true
+---
+
+## [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water)
+
+![Static Badge](https://img.shields.io/badge/Hard-No_rating-red?style=flat-square)
 
 In the first glance of this problem, we may think that we can bruteforce all the possible pairs of lines and find the maximum area. However, this will lead to $O(n^2)$ time complexity.
 
