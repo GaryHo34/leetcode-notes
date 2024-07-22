@@ -11,13 +11,14 @@ slug: /
 
 ## About
 
-A collection of the leetcode problems I've done. I tried to include my thought process and the solution I came up with. This is a work in progress and I will be adding more problems as I do them.
+leetcode的解題筆記，主要是紀錄看到題目後的思考過程，以及解題的過程。
+這是一個持續更新的專案，我會盡量把我解過的題目都加進來。
+目前主要用C++解題，會盡量補上三種語言的答案。
 
-I majorly used C++ for the solutions, but I also used Python and Java for some problems. I will try to include the solutions in all three languages.
 
-## Getting Started
+## Web Page
 
-Browse the built [web page](https://garyho34.github.io/leetcode-notes/)
+歡迎到這個[網頁](https://garyho34.github.io/leetcode-notes/)瀏覽。
 
 ## Building
 
